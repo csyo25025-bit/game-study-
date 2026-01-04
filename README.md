@@ -2,7 +2,7 @@
 
 int main() {
 
-&nbsp;	int sedai,taipu;
+&nbsp;	int sedai,taipu,sinnka,pokemonn,live;
 
 &nbsp;	printf("サトシのポケモンを考えてください");
 
@@ -19,6 +19,130 @@ int main() {
 &nbsp;		scanf("%d", \&taipu);
 
 &nbsp;		if (taipu == 1) {
+
+&nbsp;			pirntf("そのポケモンは進化しますか？\\nyesなら1、noなら0を>>");
+
+&nbsp;			scanf("%d", \&sinnka);
+
+&nbsp;			if (sinnka == 1) {
+
+&nbsp;				printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;				scanf("%d", \&taipu);
+
+&nbsp;				if (taipu == 1) {
+
+&nbsp;					printf("そのポケモンはピジョンですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;					scanf("%d", \&pokemonn);
+
+&nbsp;					if(pokemonn==1){
+
+&nbsp;						printf("私の勝ち");
+
+&nbsp;					}
+
+&nbsp;					else {
+
+&nbsp;						printf("私の負け");
+
+&nbsp;					}
+
+&nbsp;				}				
+
+&nbsp;			}
+
+&nbsp;			printf("そのポケモンはたくさんGETしましたか？\\nyesなら1、noなら0を>>");
+
+&nbsp;			scanf("%d", \&get);
+
+&nbsp;			if (get == 1) {
+
+&nbsp;				printf("そのポケモンはケンタロスですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;				scanf("%d", \&pokemonn);
+
+&nbsp;				if (pokemonn == 1) {
+
+&nbsp;					printf("私の勝ち");
+
+&nbsp;				}
+
+&nbsp;				else {
+
+&nbsp;					printf("私の負け");
+
+&nbsp;				}
+
+&nbsp;				printf("そのポケモンは長い期間サトシといましたか？\\nyesなら1、noなら0を>>");
+
+&nbsp;				scanf("%d",\&live)						}
+
+&nbsp;						if(live==0){
+
+&nbsp;							printf("ならラッタですか？\\nyesなら1、noなら0を>>")
+
+&nbsp;								scanf("%d", \&pokemonn);
+
+&nbsp;							if (pokemonn == 1) {
+
+&nbsp;								printf("私の勝ち");
+
+&nbsp;							}
+
+&nbsp;							else {
+
+&nbsp;								printf("私の負け");
+
+&nbsp;							};
+
+&nbsp;						}
+
+&nbsp;					else {
+
+&nbsp;						printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;						scanf("%d", \&taipu);
+
+&nbsp;						if (taipu == 1) {
+
+&nbsp;							printf("そのポケモンはピジョットですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;							scanf("%d", \&pokemonn);
+
+&nbsp;							if (pokemonn == 1) {
+
+&nbsp;								printf("私の勝ち");
+
+&nbsp;							}
+
+&nbsp;							else {
+
+&nbsp;								printf("私の負け");
+
+&nbsp;							}
+
+&nbsp;						}
+
+&nbsp;						printf("そのポケモンはカビゴンですか？\\nyesなら1、noなら0を>>");
+
+&nbsp;						scanf("%d", \&pokemonn);
+
+&nbsp;						if (pokemonn == 1) {
+
+&nbsp;							printf("私の勝ち");
+
+&nbsp;						}
+
+&nbsp;						else {
+
+&nbsp;							printf("私の負け");
+
+&nbsp;						}
+
+&nbsp;					}
+
+&nbsp;			}
 
 &nbsp;		
 
@@ -190,7 +314,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	}
 
@@ -372,7 +496,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	
 
@@ -556,7 +680,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	}
 
@@ -738,7 +862,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	}
 
@@ -920,7 +1044,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	
 
@@ -1104,7 +1228,7 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 &nbsp;	
 
@@ -1288,13 +1412,13 @@ int main() {
 
 
 
-&nbsp;		}
+&nbsp;		}break;
 
 
 
 &nbsp;	}
 
-&nbsp;	case 8:{//第八世代（新無印）
+&nbsp;	case 8: {//第八世代（新無印）
 
 &nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
 
@@ -1474,9 +1598,9 @@ int main() {
 
 &nbsp;		}
 
-&nbsp;	
 
-&nbsp;	}
+
+&nbsp;	}break;
 
 }
 
