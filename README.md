@@ -152,6 +152,40 @@ int main() {
 
 &nbsp;		if (taipu == 1); {
 
+&nbsp;			printf("そのポケモンは進化しますか?\\nyesなら1、noなら0を>>");
+
+&nbsp;			scanf("%d", \&sinnka);
+
+&nbsp;			if (sinnka == 1) {
+
+&nbsp;				printf("そのポケモンはマンキーですか？yesなら1、noなら0を>>");
+
+&nbsp;				scanf("%d", \&pokemonn);
+
+&nbsp;				if (pokemonn == 1) {
+
+&nbsp;					printf("私の勝ち");
+
+&nbsp;				}
+
+&nbsp;				printf("そのポケモンはオコリザルですか？yesなら1、noなら0を>>");
+
+&nbsp;				scanf("%d", \&pokemonn);
+
+&nbsp;				if (pokemonn == 1) {
+
+&nbsp;					printf("私の勝ち");
+
+&nbsp;				}
+
+&nbsp;				else {
+
+&nbsp;					printf("私の負け");
+
+&nbsp;				}
+
+&nbsp;			}
+
 &nbsp;		
 
 &nbsp;		}
