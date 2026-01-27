@@ -1,218 +1,190 @@
 \#include<stdio.h>
 
+
+
 int main() {
 
-&nbsp;	int sedai,taipu,sinnka,pokemonn,live;
+&nbsp;	int s = 1;
 
-&nbsp;	printf("サトシのポケモンを考えてください");
+&nbsp;	int t;
 
-&nbsp;	printf("そのポケモンの世代はいつですか？\\n第一世代なら1、第二世代なら2…新無印なら8を選択してください。");
+&nbsp;	char y\_n;
 
-&nbsp;	scanf("%d", \&sedai);
+&nbsp;	char pokemon;
 
-&nbsp;	switch (sedai) {
+&nbsp;	printf("ポケモン当てクイズ(サトシ)\\n");
 
-&nbsp;	case 1://第一世代（カントー）
+&nbsp;	printf("あなたの考えているカントー地方の時にサトシと出会ったポケモンは？\\n");
 
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1) {
+&nbsp;	printf("そのポケモンのタイプは？\\n(ノーマル：０、かくとう：１、どく：２、じめん：３、ひこう：４、むし：５、いわ：６、ゴースト：７、はがね：８、ほのお：９、みず：１０、でんき：１１、くさ：１２、こおり：１３、エスパー：１４、ドラゴン：１５、あく：１６、フェアリー：１７)");
 
-&nbsp;			pirntf("そのポケモンは進化しますか？\\nyesなら1、noなら0を>>");
+&nbsp;	scanf("%d", \&t);
 
-&nbsp;			scanf("%d", \&sinnka);
 
-&nbsp;			if (sinnka == 1) {
 
-&nbsp;				printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;	//第一世代（ノーマル）
 
-&nbsp;				scanf("%d", \&taipu);
+&nbsp;	if (s == 1) {
 
-&nbsp;				if (taipu == 1) {
+&nbsp;		if (t == 0) {
 
-&nbsp;					printf("そのポケモンはピジョンですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンは進化をしますか？(y/n)>>");
 
-&nbsp;					scanf("%d", \&pokemonn);
+&nbsp;			scanf(" %c", \&y\_n);
 
-&nbsp;					if(pokemonn==1){
+&nbsp;			if (y\_n == 'y') {
+
+&nbsp;				printf("そのポケモンはピジョンですか？(y/n)>>");
+
+&nbsp;				scanf(" %c", \&pokemon);
+
+&nbsp;				if (pokemon == 'y') {
+
+&nbsp;					printf("私の勝ち");
+
+&nbsp;				}
+
+&nbsp;				else if (pokemon == 'n') {
+
+&nbsp;					printf("私の負け");
+
+&nbsp;				}
+
+&nbsp;				else {
+
+&nbsp;					printf("どっちなんだい");
+
+&nbsp;				}
+
+&nbsp;			}
+
+&nbsp;			else if (y\_n == 'n') {
+
+&nbsp;				printf("そのポケモンは空を飛びますか（y/n）>>");
+
+&nbsp;				scanf(" %c", \&y\_n);
+
+&nbsp;				if (y\_n == 'y') {
+
+&nbsp;					printf("そのポケモンはピジョットですか(y/n)>>");
+
+&nbsp;					scanf(" %c", \&pokemon);
+
+&nbsp;					if (pokemon == 'y') {
 
 &nbsp;						printf("私の勝ち");
 
 &nbsp;					}
 
-&nbsp;					else {
+&nbsp;					else if (pokemon == 'n') {
 
 &nbsp;						printf("私の負け");
 
 &nbsp;					}
 
-&nbsp;				}				
-
-&nbsp;			}
-
-&nbsp;			printf("そのポケモンはたくさんGETしましたか？\\nyesなら1、noなら0を>>");
-
-&nbsp;			scanf("%d", \&get);
-
-&nbsp;			if (get == 1) {
-
-&nbsp;				printf("そのポケモンはケンタロスですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;				scanf("%d", \&pokemonn);
-
-&nbsp;				if (pokemonn == 1) {
-
-&nbsp;					printf("私の勝ち");
-
-&nbsp;				}
-
-&nbsp;				else {
-
-&nbsp;					printf("私の負け");
-
-&nbsp;				}
-
-&nbsp;				printf("そのポケモンは長い期間サトシといましたか？\\nyesなら1、noなら0を>>");
-
-&nbsp;				scanf("%d",\&live)						}
-
-&nbsp;						if(live==0){
-
-&nbsp;							printf("ならラッタですか？\\nyesなら1、noなら0を>>")
-
-&nbsp;								scanf("%d", \&pokemonn);
-
-&nbsp;							if (pokemonn == 1) {
-
-&nbsp;								printf("私の勝ち");
-
-&nbsp;							}
-
-&nbsp;							else {
-
-&nbsp;								printf("私の負け");
-
-&nbsp;							};
-
-&nbsp;						}
-
 &nbsp;					else {
 
-&nbsp;						printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;						scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;						if (taipu == 1) {
+&nbsp;				}
 
-&nbsp;							printf("そのポケモンはピジョットですか？\\nyesなら1、noなら0を>>");
+&nbsp;				else if (y\_n == 'n') {
 
-&nbsp;							scanf("%d", \&pokemonn);
+&nbsp;					printf("そのポケモンはたくさんゲットされましたか？（y/n）>>");
 
-&nbsp;							if (pokemonn == 1) {
+&nbsp;					scanf(" %c", \&y\_n);
 
-&nbsp;								printf("私の勝ち");
+&nbsp;					if (y\_n == 'y') {
 
-&nbsp;							}
+&nbsp;						printf("そのポケモンはケンタロスですか？(y/n)>>");
 
-&nbsp;							else {
+&nbsp;						scanf(" %c", \&pokemon);
 
-&nbsp;								printf("私の負け");
-
-&nbsp;							}
-
-&nbsp;						}
-
-&nbsp;						printf("そのポケモンはカビゴンですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;						scanf("%d", \&pokemonn);
-
-&nbsp;						if (pokemonn == 1) {
+&nbsp;						if (pokemon == 'y') {
 
 &nbsp;							printf("私の勝ち");
 
 &nbsp;						}
 
-&nbsp;						else {
+&nbsp;						else if (pokemon == 'n') {
 
 &nbsp;							printf("私の負け");
 
 &nbsp;						}
 
+&nbsp;						else {
+
+&nbsp;							printf("どっちなんだい");
+
+&nbsp;						}
+
 &nbsp;					}
 
-&nbsp;			}
+&nbsp;					else if (y\_n == 'n') {
 
-&nbsp;		
+&nbsp;						printf("そのポケモンは大食いですか？(y/n)>>");
 
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						scanf(" %c", \&y\_n);
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						if (y\_n == 'y') {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;							printf("そのポケモンはカビゴンですか？(y/n)>>");
 
-&nbsp;			printf("そのポケモンは進化しますか?\\nyesなら1、noなら0を>>");
+&nbsp;							scanf(" %c", \&pokemon);
 
-&nbsp;			scanf("%d", \&sinnka);
+&nbsp;							if (pokemon == 'y') {
 
-&nbsp;			if (sinnka == 1) {
+&nbsp;								printf("私の勝ち");
 
-&nbsp;				printf("そのポケモンはマンキーですか？yesなら1、noなら0を>>");
+&nbsp;							}
 
-&nbsp;				scanf("%d", \&pokemonn);
+&nbsp;							else if (pokemon == 'n') {
 
-&nbsp;				if (pokemonn == 1) {
+&nbsp;								printf("私の負け");
 
-&nbsp;					printf("私の勝ち");
+&nbsp;							}
 
-&nbsp;				}
+&nbsp;							else {
 
-&nbsp;				printf("そのポケモンはオコリザルですか？yesなら1、noなら0を>>");
+&nbsp;								printf("どっちなんだい");
 
-&nbsp;				scanf("%d", \&pokemonn);
+&nbsp;							}
 
-&nbsp;				if (pokemonn == 1) {
+&nbsp;						}
 
-&nbsp;					printf("私の勝ち");
+&nbsp;						else if (y\_n == 'n') {
 
-&nbsp;				}
+&nbsp;							printf("そのポケモンはラッタですか？(y/n)>>");
 
-&nbsp;				else {
+&nbsp;							scanf(" %c", \&pokemon);
 
-&nbsp;					printf("私の負け");
+&nbsp;							if (pokemon == 'y') {
 
-&nbsp;				}
+&nbsp;								printf("私の勝ち");
 
-&nbsp;			}
+&nbsp;							}
 
-&nbsp;		
+&nbsp;							else if (pokemon == 'n') {
 
-&nbsp;		}
+&nbsp;								printf("私の負け");
 
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;							}
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;						else {
 
-&nbsp;			printf("そのポケモンは進化しますか？yes1なら、noなら0を>>");
+&nbsp;							printf("どっちなんだい");
 
-&nbsp;			scanf("%d", \&sinnka);
+&nbsp;						}
 
-&nbsp;			if (sinnka == 1) {
+&nbsp;					}
 
-&nbsp;				printf("そのポケモンはフシギダネですか？yesなら1、noなら0を>>");
 
-&nbsp;				if (pokemonn == 1) {
-
-&nbsp;					printf("私の勝ち");
-
-&nbsp;				}
-
-&nbsp;				else {
-
-&nbsp;					printf("私の負け");
 
 &nbsp;				}
 
@@ -220,1463 +192,873 @@ int main() {
 
 &nbsp;			else {
 
-&nbsp;				printf("そのポケモンはベトベトンですか？yesなら1、noなら0を>>");
+&nbsp;				printf("どれなんだい");
 
-&nbsp;				scanf("%d", \&pokemonn);
 
-&nbsp;				if (pokemonn == 1) {
+
+&nbsp;			}
+
+&nbsp;		}
+
+
+
+&nbsp;		//第一世代（かくとう）
+
+&nbsp;		else if (t == 1) {
+
+&nbsp;			printf("そのポケモンは進化しますか？(y/n)>>");
+
+&nbsp;			scanf(" %c", \&y\_n);
+
+&nbsp;			if (y\_n == 'y') {
+
+&nbsp;				printf("そのポケモンはマンキーですか？(y/n)>>");
+
+&nbsp;				scanf(" %c", \&pokemon);
+
+&nbsp;				if (pokemon == 'y') {
 
 &nbsp;					printf("私の勝ち");
 
 &nbsp;				}
 
-&nbsp;				else {
+&nbsp;				else if (pokemon == 'n') {
 
 &nbsp;					printf("私の負け");
 
 &nbsp;				}
 
+&nbsp;				else {
+
+&nbsp;					printf("どっちなんだい");
+
+&nbsp;				}
+
 &nbsp;			}
 
-&nbsp;		
+&nbsp;			else if (y\_n == 'n') {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}break;
-
-&nbsp;	}
-
-&nbsp;	case 2: {//第二世代（ジョウト）
-
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1) {
-
-
-
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}break;
-
-&nbsp;	
-
-&nbsp;	}
-
-&nbsp;	case 3: {//第三世代（ホウエン）
-
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1) {
-
-
-
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}break;
-
-&nbsp;	}
-
-&nbsp;	case 4: {//第四世代（シンオウ）
-
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1) {
-
-
-
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				printf("そのポケモンはオコリザルですか？(y/n)");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				scanf(" %c", \&pokemon);
 
+&nbsp;				if (pokemon == 'y') {
 
+&nbsp;					printf("私の勝ち");
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
+&nbsp;				}
 
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				else if (pokemon == 'n') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					printf("私の負け");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else {
 
+&nbsp;					printf("どっちなんだい");
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;			}
 
-
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
 
 
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;		//第一世代（毒）
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;		else if (t == 2) {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			printf("そのポケモンは進化しますか（y/n）>>");
 
+&nbsp;			scanf(" %c", \&y\_n);
 
-
-&nbsp;		}
+&nbsp;			if (y\_n == 'n') {
 
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("そのポケモンはベトベトンですか？(y/n)>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				if (pokemon == 'y') {
 
+&nbsp;					printf("私の勝ち");
 
+&nbsp;				}
 
-&nbsp;		}
+&nbsp;				else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				else {
 
+&nbsp;					printf("どっちなんだい");
 
+&nbsp;				}
 
-&nbsp;		}
+&nbsp;			}
 
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			else if (y\_n == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				printf("そのポケモンは草タイプでもありますか？(y/n)>>");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				scanf(" %c", \&y\_n);
 
+&nbsp;				if (y\_n == 'y') {
 
+&nbsp;					printf("そのポケモンはフシギダネですか？(y/n)>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("私の勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}break;
+&nbsp;					}
 
-&nbsp;	}
+&nbsp;					else {
 
-&nbsp;	case 5: {//第五世代（イッシュ）
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					}
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				}
 
-&nbsp;		if (taipu == 1) {
+&nbsp;				else if (y\_n == 'n') {
 
+&nbsp;					printf("そのポケモンはゴーストですか（y/n）>>");
 
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("私の勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;			}
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（じめん）
 
+&nbsp;		else if (t == 3) {
 
+&nbsp;			printf("そんなポケモンいたかな？");
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（ひこう）
 
+&nbsp;		else if (t == 4) {
 
+&nbsp;			printf("そのポケモンは進化しますか（y/n）>>");
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
+&nbsp;			scanf(" %c", \&y\_n);
 
+&nbsp;			if (y\_n == 'y') {
 
+&nbsp;				printf("そのポケモンはピジョンですか(y/n)>>");
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				scanf(" %c", \&y\_n);
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				if (y\_n == 'y') {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					printf("私の勝ち");
 
+&nbsp;				}
 
-
-&nbsp;		}
+&nbsp;				else if (y\_n == 'n') {
 
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				else {
 
+&nbsp;					printf("どっちなんだい");
 
+&nbsp;				}
 
-&nbsp;		}
+&nbsp;			}
 
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			else if (y\_n == 'n') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				printf("そのポケモンは虫タイプですか？(y/n)>>");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				scanf(" %c", \&y\_n);
 
+&nbsp;				if (y\_n == 'y') {
 
+&nbsp;					printf("そのポケモンはバタフリーですか（y/n）>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("私の勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;				else if (y\_n == 'n') {
 
-&nbsp;		}
+&nbsp;					printf("そのポケモンはノーマルタイプですか（y/n）>>");
 
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					scanf(" %c", \&y\_n);
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					if (y\_n == 'y') {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;						printf("そのポケモンはピジョットですか？（y/n）>>");
 
+&nbsp;						scanf(" %c", \&pokemon);
 
+&nbsp;						if (pokemon == 'y') {
 
-&nbsp;		}
+&nbsp;							printf("私の勝ち");
 
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						}
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						else if (pokemon == 'n') {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;							printf("わたしの負け");
 
+&nbsp;						}
 
+&nbsp;						else {
 
-&nbsp;		}
+&nbsp;							printf("どっちなんだい");
 
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						}
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					else if (y\_n == 'n') {
 
+&nbsp;						printf("そのポケモンはリザードンですか（y/n）>>");
 
+&nbsp;						scanf(" %c", \&pokemon);
 
-&nbsp;		}
+&nbsp;						if (pokemon == 'y') {
 
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;							printf("私の勝ち");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;						else if (pokemon == 'n') {
 
+&nbsp;							printf("私の負け");
 
+&nbsp;						}
 
-&nbsp;		}
+&nbsp;						else {
 
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;							printf("どっちなんだい");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						}
 
-&nbsp;		if (taipu == 1); {
 
 
+&nbsp;					}
 
-&nbsp;		}
 
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;				}
 
+&nbsp;			}
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}break;
-
-&nbsp;	
 
-&nbsp;	}
 
-&nbsp;	case 6: {//第六世代（カロス）
 
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;		//第一世代（むし）
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;		else if (t == 5) {
 
-&nbsp;		if (taipu == 1) {
+&nbsp;			printf("そのポケモンは進化しますか（y/n）>>");
 
+&nbsp;			scanf(" %c", \&y\_n);
 
+&nbsp;			if (y\_n == 'n') {
 
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("そのポケモンはバタフリーですか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				if (pokemon == 'y') {
 
+&nbsp;					printf("わたしの勝ち");
 
+&nbsp;				}
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
+&nbsp;				else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				else {
 
+&nbsp;					printf("どっちなんだい");
 
+&nbsp;				}
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
+&nbsp;			}
 
+&nbsp;			else if (y\_n == 'y') {
 
+&nbsp;				printf("そのポケモンは二回進化しますか（y/n）>>");
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				scanf(" %c", \&y\_n);
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				if (y\_n == 'y') {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					printf("そのポケモンはキャタピーですか（y/n）>>");
 
+&nbsp;					scanf(" %c", \&pokemon);
 
-
-&nbsp;		}
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
+&nbsp;					}
 
-&nbsp;		}
+&nbsp;					else {
 
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("どっちなんかい");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else if (y\_n == 'n') {
 
+&nbsp;					printf("そのポケモンはトランセルですか（y/n）>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんかい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;			}
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（いわ）
 
+&nbsp;		else if (t == 6) {
 
+&nbsp;			printf("そんなポケモンいたかな");
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;		//第一世代（ゴースト）
 
+&nbsp;		else if (t == 7) {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンはゴーストですか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			if (pokemon == 'y') {
 
+&nbsp;				printf("私の勝ち");
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			else {
 
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（はがね）
 
+&nbsp;		else if (t == 8) {
 
+&nbsp;			printf("そんなポケモンいたかな");
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（ほのお）
 
+&nbsp;		else if (t == 9) {
 
+&nbsp;			printf("そのポケモンは進化しますか（y/n）>>");
 
-&nbsp;		}
+&nbsp;			scanf(" %c", \&y\_n);
 
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			if (y\_n == 'n') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				printf("そのポケモンはリザードンですか（y/n）>>");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				scanf(" %c", \&pokemon);
 
+&nbsp;				if (pokemon == 'y') {
 
+&nbsp;					printf("わたしの勝ち");
 
-&nbsp;		}
+&nbsp;				}
 
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				else if (pokemon == 'n') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					printf("私の負け");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else {
 
+&nbsp;					printf("どっちなんだい");
 
-&nbsp;		}break;
+&nbsp;				}
 
-&nbsp;	
+&nbsp;			}
 
-&nbsp;	}
+&nbsp;			else if (y\_n == 'y') {
 
-&nbsp;	case 7: {//第七世代（アローラ）
+&nbsp;				printf("そのポケモンは反抗期でしたか？(y/n)>>");
 
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				scanf(" %c", \&y\_n);
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				if (y\_n == 'n') {
 
-&nbsp;		if (taipu == 1) {
+&nbsp;					printf("そのポケモンはヒトカゲですか（y/n）>>");
 
+&nbsp;					scanf(" %c", \&pokemon);
 
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
+&nbsp;					}
 
-&nbsp;		}
+&nbsp;					else {
 
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else if (y\_n == 'y') {
 
+&nbsp;					printf("そのポケモンはリザードですか（y/n）>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;			}
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
 
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;		//第一世代（みず）
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		else if (t == 10) {
 
+&nbsp;			printf("そのポケモンは進化しますか（y/n）>>");
 
+&nbsp;			scanf(" %c", \&y\_n);
 
-&nbsp;		}
+&nbsp;			if (y\_n == 'y') {
 
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("そのポケモンは二回進化しますか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				scanf(" %c", \&y\_n);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				if (y\_n == 'y') {
 
+&nbsp;					printf("そのポケモンはゼニガメですか（y/n）>>");
 
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		}
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
+&nbsp;					}
 
-&nbsp;		}
+&nbsp;					else {
 
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else if (y\_n == 'n') {
 
+&nbsp;					printf("そのポケモンはクラブですか（y/n）>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (y\_n == 'n') {
 
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("そのポケモンは氷タイプですか(y/n)>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				scanf(" %c", \&y\_n);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				if (y\_n == 'y') {
 
+&nbsp;					printf("そのポケモンはラプラスですか(y/n)>>");
 
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		}
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
+&nbsp;					}
 
-&nbsp;		}
+&nbsp;					else {
 
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;					}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				}
 
+&nbsp;				else if (y\_n == 'n') {
 
+&nbsp;					printf("キングラーですか（y/n）>>");
 
-&nbsp;		}
+&nbsp;					scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("わたしの勝ち");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;					else if (pokemon == 'n') {
 
+&nbsp;						printf("私の負け");
 
-&nbsp;		}
+&nbsp;					}
 
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;					else {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;						printf("どっちなんだい");
 
-&nbsp;		if (taipu == 1); {
+&nbsp;					}
 
+&nbsp;				}
 
+&nbsp;			}
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
 
 
-&nbsp;		}break;
 
+&nbsp;		//第一世代（でんき）
 
+&nbsp;		else if (t == 11) {
 
-&nbsp;	}
+&nbsp;			printf("そのポケモンはピカチュウですか（y/n）>>");
 
-&nbsp;	case 8: {//第八世代（新無印）
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		printf("そのポケモンはノーマルタイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			if (pokemon == 'y') {
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;				printf("わたしの勝ち");
 
-&nbsp;		if (taipu == 1) {
+&nbsp;			}
 
+&nbsp;			else if (pokemon == 'n') {
 
+&nbsp;				printf("私の負け");
 
-&nbsp;		}printf("そのポケモンは格闘タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			}
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			else {
 
-&nbsp;		if (taipu == 1); {
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは毒タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンは地面タイプですか？\\nyesなら1、noなら0を>>");
-
-&nbsp;		scanf("%d", \&taipu);
-
-&nbsp;		if (taipu == 1); {
-
-
-
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは飛行タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;		//第一世代（くさ）
 
+&nbsp;		else if (t == 12) {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは虫タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンはフシギダネですか(y/n)>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			if (pokemon == 'y') {
 
+&nbsp;				printf("わたしの勝ち");
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンは岩タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			else {
 
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンはゴーストタイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;		//第一世代（こおり）
 
+&nbsp;		else if (t == 13) {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは鋼タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンはラプラスですか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			if (pokemon == 'y') {
 
+&nbsp;				printf("わたしの勝ち");
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンは炎タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			else {
 
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンは水タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;		//第一世代（エスパー）
 
+&nbsp;		else if (t == 14) {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは電気タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンはバリヤードですか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			if (pokemon == 'y') {
 
+&nbsp;				printf("わたしの勝ち");
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンは草タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			else {
 
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンは氷タイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（ドラゴン）
 
+&nbsp;		else if (t == 15) {
 
+&nbsp;			printf("そんなポケモンいあたかな？");
 
 &nbsp;		}
 
-&nbsp;		printf("そのポケモンはエスパータイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;		//第一世代（あく）
 
+&nbsp;		else if (t == 16) {
 
+&nbsp;			printf("そんなポケモンいたかな？");
 
 &nbsp;		}
-
-&nbsp;		printf("そのポケモンはドラゴンタイプですか？\\nyesなら1、noなら0を>>");
 
-&nbsp;		scanf("%d", \&taipu);
 
-&nbsp;		if (taipu == 1); {
 
+&nbsp;		//第一世代（フェアリー）
 
+&nbsp;		else if (t == 17) {
 
-&nbsp;		}
-
-&nbsp;		printf("そのポケモンは悪タイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;			printf("そのポケモンはバリヤードですか（y/n）>>");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			scanf(" %c", \&pokemon);
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			if (pokemon == 'y') {
 
+&nbsp;				printf("わたしの勝ち");
 
+&nbsp;			}
 
-&nbsp;		}
+&nbsp;			else if (pokemon == 'n') {
 
-&nbsp;		printf("そのポケモンはフェアリータイプですか？\\nyesなら1、noなら0を>>");
+&nbsp;				printf("私の負け");
 
-&nbsp;		scanf("%d", \&taipu);
+&nbsp;			}
 
-&nbsp;		if (taipu == 1); {
+&nbsp;			else {
 
+&nbsp;				printf("どっちなんだい");
 
+&nbsp;			}
 
 &nbsp;		}
-
-
 
-&nbsp;	}break;
+&nbsp;	}return 0;
 
 }
 
